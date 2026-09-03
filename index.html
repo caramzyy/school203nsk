@@ -251,6 +251,33 @@
   .linklist a:hover{color:var(--accent);}
   .linklist span.host{font-size:13px; color:var(--muted);}
 
+  /* author badge */
+  .author-badge{
+    position:fixed;
+    bottom:18px; right:18px;
+    z-index:50;
+    display:flex; align-items:center; gap:9px;
+    padding:8px 14px 8px 8px;
+    border:1px solid var(--border);
+    border-radius:999px;
+    background:rgba(21,26,21,.9);
+    backdrop-filter:blur(6px);
+    font-size:13px;
+    color:var(--muted);
+  }
+  .author-badge img{
+    width:26px; height:26px;
+    border-radius:50%;
+    object-fit:cover;
+    display:block;
+  }
+  .author-badge b{color:var(--text); font-weight:600;}
+  .author-badge:hover{border-color:var(--accent);}
+  @media (max-width:520px){
+    .author-badge{bottom:12px; right:12px; padding:6px 12px 6px 6px; font-size:12px;}
+    .author-badge img{width:22px; height:22px;}
+  }
+
   /* footer */
   footer{padding:56px 0 48px;}
   .foot-grid{
@@ -452,10 +479,15 @@
     </div>
     <div class="fine">
       <span>МБОУ СОШ № 203 ХЭЦ, Новосибирск</span>
-      <span>Неофициальный макет — переработка дизайна сайта школы</span>
+      <span>Дизайн и разработка — <a href="https://github.com/caramzyy" target="_blank" rel="noopener" style="color:var(--accent);">caramzy</a></span>
     </div>
   </div>
 </footer>
+
+<a class="author-badge" href="https://github.com/caramzyy" target="_blank" rel="noopener">
+  <img src="photos/avatar.jpg" alt="caramzy">
+  <span>сайт сделал <b>caramzy</b></span>
+</a>
 
 </body>
 </html>
